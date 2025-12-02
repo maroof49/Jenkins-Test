@@ -12,9 +12,6 @@ pipeline {
       steps{
           echo "Bye Maroof"
       }
-      post {
-        echo "end"
-      }
     }
   }
 }
