@@ -16,6 +16,7 @@ pipeline {
       }
     }
     stage('shared-library'){
+      agent any
       steps{
           helloWorld()
       }
