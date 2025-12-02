@@ -1,8 +1,6 @@
+@Library("my-shared-library") -
 pipeline {
   agent none
-  tools{
-    maven 'mvn'
-  }
   stages {
     stage ('build'){
       agent any
@@ -11,11 +9,15 @@ pipeline {
           sh 'mvn --version'
       }
     }
-
     stage ('deploy'){
       agent any
       steps{
           echo "Bye Maroof"
+      }
+    }
+    stage('shared-library'){
+      steps{
+          helloWorld()
       }
     }
   }
