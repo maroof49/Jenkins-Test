@@ -5,6 +5,7 @@ pipeline {
       agent any
       steps{
           echo "hello Maroof siddiqui"
+          sh 'mvn --version'
       }
     }
 
